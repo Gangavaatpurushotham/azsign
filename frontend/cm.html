@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super 6 - Chandrababu Naidu</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ffcc00;
+      --accent: #ea1915;
+      --bg: #fffbea;
+      --card-bg: #fff;
+      --text: #222;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--primary);
+      color: #000;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .header-logos {
+      display: flex;
+      gap: 1rem;
+      margin-right: 1rem;
+    }
+    .header-logos img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      letter-spacing: 2px;
+    }
+    .header-text p {
+      margin: 0.3rem 0 0 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    nav { margin-top: 1rem; text-align: center; width: 100%; }
+    nav a {
+      color: #000; text-decoration: none; margin: 0 1rem;
+      font-weight: 700; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+    .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+    .section-title {
+      font-size: 2rem; margin-bottom: 1rem; color: var(--primary);
+      text-align: center; letter-spacing: 1px;
+    }
+    .super6-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .super6-logo img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .schemes {
+      display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .scheme-card {
+      background: var(--card-bg); box-shadow: var(--shadow); border-radius: 8px;
+      padding: 1rem 1.5rem; min-width: 250px; text-align: center;
+      font-weight: 600; color: #000;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .scheme-card:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: var(--primary); color: #000;
+    }
+    .details {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem; margin-top: 2rem;
+    }
+    .detail-card {
+      background: var(--card-bg); box-shadow: var(--shadow); border-radius: 12px;
+      padding: 1.5rem; line-height: 1.6;
+    }
+    .detail-card h3 {
+      margin-top: 0; color: var(--accent); font-size: 1.3rem;
+    }
+    footer {
+      background: var(--primary); color: #000; text-align: center;
+      padding: 1.5rem 0; margin-top: 2rem; font-size: 1rem;
+      letter-spacing: 1px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Two Logos on Left -->
+    <div class="header-logos">
+      <img src="ap.jpg" alt="AP Logo">
+      <img src="cm.jpg" alt="CBN Logo">
+    </div>
+    <!-- Title -->
+    <div class="header-text">
+      <h1>Chandrababu Naidu</h1>
+      <p>Super 6 Welfare Schemes</p>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#schemes">Schemes</a>
+      <a href="#details">Details</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Super 6 Logo -->
+    <div class="super6-logo">
+      <img src="super6.webp" alt="Super 6 Logo">
+    </div>
+
+    <section id="schemes">
+      <h2 class="section-title">Super 6 Schemes</h2>
+      <div class="schemes">
+        <div class="scheme-card">1. Monthly aid to women – ₹1,500/month pension assistance</div>
+        <div class="scheme-card">2. Youth job support – 20 lakh jobs or ₹3,000/month allowance</div>
+        <div class="scheme-card">3. Educational support – ₹15,000/year (Thalliki Vandanam)</div>
+        <div class="scheme-card">4. Farmer assistance – ₹20,000/year (Annadata Sukhibhava)</div>
+        <div class="scheme-card">5. Free LPG – 3 cylinders per year (Deepam-2)</div>
+        <div class="scheme-card">6. Free transport – Bus travel for women in APSRTC</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+    <!-- Eligibility & Documents Section -->
+    <section id="eligibility">
+      <h2 class="section-title">Eligibility & Documents</h2>
+      <div class="schemes">
+        <div class="scheme-card">
+          <strong>Eligibility:</strong><br>
+          Women of Andhra Pradesh traveling in APSRTC buses are eligible.
+        </div>
+        <div class="scheme-card">
+          <strong>Documents Required:</strong><br>
+          Valid Aadhaar Card (Physical Copy – Offline only, not online version).
+        </div>
+        <div class="scheme-card">
+          <strong>Note:</strong><br>
+          Passengers must carry the Aadhaar card while traveling to avail the free bus service.
+        </div>
+        <div class="scheme-card">
+          <strong>My Opinion:</strong><br>
+          This scheme is really useful as it reduces travel costs and empowers women’s mobility.
+        </div>
+      </div>
+    </section>
+            <!-- CM Office Contact Info -->
+        <div style="margin-top:2rem; background:var(--card-bg); box-shadow:var(--shadow); border-radius:8px; padding:1.5rem; max-width:500px; margin-left:auto; margin-right:auto; text-align:center;">
+            <h3 style="color:var(--primary); margin-top:0;">CM Office Contact Info</h3>
+            <p><strong>Email:</strong> <a href="mailto:cm@ap.gov.in" style="color:var(--accent); text-decoration:none;">cm@ap.gov.in</a></p>
+            <p><strong>Toll-Free Number:</strong> 1800-425-4440</p>
+        </div>
+        <footer>
+    &copy; 2024 Chandrababu Naidu. All rights reserved.
+  </footer>
+
+

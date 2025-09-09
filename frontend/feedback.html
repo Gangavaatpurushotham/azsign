@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Form - Page 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f9fa;
+    }
+    form {
+      max-width: 500px;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .button-container {
+      text-align: right;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+  </style>
+</head>
+<body>
+  <h2>Feedback Form - Page 1</h2>
+  <form id="formPage1" action="feedback2.html" method="GET">
+    <img src="gg.jpg" alt="Google Logo" />
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+    <div class="button-contain
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback Form - Page 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f8f9fa;
+    }
+    form {
+      max-width: 500px;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background-color: #4285f4;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+  </style>
+</head>
+<body>
+  <h2>Feedback Form - Page 2</h2>
+
+  <form id="formPage2" action="/submit-feedback" method="POST">
+    <img src="fd.jpg" alt="Google Forms Logo" />
+
+    <label for="rating">Overall Rating:</label>
+    <select id="rating" name="rating" required>
+      <option value="">Select a rating</option>
+      <option value="5">5 - Excellent</option>
+      <option value="4">4 - Very Good</option>
+      <option value="3">3 - Good</option>
+      <option value="2">2 - Fair</option>
+      <option value="1">1 - Poor</option>
+    </select>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback here..." required></textarea>
+
+    <div class="button-container">
+      <button type="button" onclick="goBack()">Back</button>
+      <button type="submit">Submit Feedback</button>
+    </div>
+  </form>
+
+  <script>
+    // Retrieve query parameters from page 1 and keep them here (optional)
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name') || '';
+    const email = urlParams.get('email') || '';
+
+    // If you want, you can send these values along with the form by adding hidden inputs
+    const form = document.getElementById('formPage2');
+    if(name && email) {
+      const inputName = document.createElement('input');
+      inputName.type = 'hidden';
+      inputName.name = 'name';
+      inputName.value = name;
+      form.appendChild(inputName);
+
+      const inputEmail = document.createElement('input');
+      inputEmail.type = 'hidden';
+      inputEmail.name = 'email';
+      inputEmail.value = email;
+      form.appendChild(inputEmail);
+    }
+
+    function goBack() {
+      // Navigate back to page 1 with previous inputs preserved
+      window.location.href = `feedback1.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+    }
+  </script>
+</body>
+</html>
