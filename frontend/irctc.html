@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRCTC Ticket Booking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('vdh.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: rgba(0, 33, 71, 0.85);
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-left img, .logo-right img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Booking Container */
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+      background: rgba(255, 255, 255, 0.92); /* translucent white to see train image behind */
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #002147;
+    }
+
+    .form-group {
+      margin: 15px 0;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .options {
+      margin: 15px 0;
+    }
+
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e65c00;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0, 33, 71, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar with two logos -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Trains</a></li>
+      <li><a href="#">Flights</a></li>
+      <li><a href="#">Hotels</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="logo-right">
+      <img src="logo.png" alt="IRCTC Logo Right">
+    </div>
+  </nav>
+<div class="extra-images">
+  <img src="logo.png" alt="Railway Station">
+  <img src="vdd.avif" alt="Inside Train">
+</div>
+
+  <!-- Ticket Booking Form -->
+  <div class="container">
+    <h1>Book Your Train Ticket</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="from">From</label>
+        <input type="text" id="from" placeholder="Enter source station">
+      </div>
+
+      <div class="form-group">
+        <label for="to">To</label>
+        <input type="text" id="to" placeholder="Enter destination station">
+      </div>
+
+      <div class="form-group">
+        <label for="date">Journey Date</label>
+        <input type="date" id="date">
+      </div>
+<div class="extra-images">
+  <img src="tr.jpg" alt="Railway Station">
+</div>
+
+      <div class="form-group">
+        <label for="class">Class</label>
+        <select id="class">
+          <option>All Classes</option>
+          <option>AC First Class (1A)</option>
+          <option>AC 2 Tier (2A)</option>
+          <option>AC 3 Tier (3A)</option>
+          <option>Sleeper (SL)</option>
+          <option>Second Sitting (2S)</option>
+        </select>
+      </div>
+
+      <!-- Extra Options -->
+      <div class="options">
+        <label><input type="checkbox"> Person with Disability Concession</label>
+        <label><input type="checkbox"> Flexible with Date</label>
+        <label><input type="checkbox"> Train with Available Berth</label>
+        <label><input type="checkbox"> Railway Pass Concession</label>
+      </div>
+
+      <button type="submit">Search Trains</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Customer Care: 14646 (Within India) | +91-8046447999 (Outside India)</p>
+    <p>Email: <a href="mailto:care@irctc.co.in">care@irctc.co.in</a></p>
+    <p>&copy; 2025 IRCTC - All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
+<div class="booking-section">
+  <div class="side-img">
+    <img src="train-left.jpg" alt="Train Left">
+  </div>
+
+  <div class="container">
+    <h1>Book Your Train Ticket</h1>
+    <!-- form content here -->
+  </div>
+
+  <div class="side-img">
+    <img src="vad.jpg" alt="Train Right">
+  </div>
+</div>
