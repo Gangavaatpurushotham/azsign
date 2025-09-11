@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Enrollment</title>
+  <style>
+    /* ===== TOPBAR (Flexbox) ===== */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #004466;
+      color: #fff;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .menu a:hover {
+      color: #ffcc00;
+    }
+
+    /* ===== ENROLL FORM (CSS Grid) ===== */
+    .enroll-box {
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 25px;
+      border: 2px solid #004466;
+      border-radius: 12px;
+      background: #eef6f9;
+    }
+
+    .enroll-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #004466;
+    }
+
+    .enroll-form {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 18px;
+    }
+
+    .enroll-form label {
+      align-self: center;
+      font-weight: bold;
+    }
+
+    .enroll-form input,
+    .enroll-form select {
+      padding: 9px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+
+    .gender-field {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* ===== SUBMIT BUTTON ===== */
+    .submit-btn {
+      grid-column: span 2;
+      padding: 12px;
+      background: #004466;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+      background: #006699;
+    }
+
+    /* ===== RESPONSIVE VIEW ===== */
+    @media (max-width: 650px) {
+      .topbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .menu {
+        justify-content: center;
+      }
+
+      .enroll-form {
+        grid-template-columns: 1fr;
+      }
+
+      .enroll-form label {
+        margin-bottom: -10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="topbar">
+    <h1 class="brand">EduPortal</h1>
+    <nav class="menu">
+      <a href="#">Dashboard</a>
+      <a href="#">Programs</a>
+      <a href="#">Support</a>
+    </nav>
+  </header>
+
+  <!-- ===== ENROLLMENT FORM ===== -->
+  <div class="enroll-box">
+    <h2>Student Enrollment Form</h2>
+    <form class="enroll-form">
+      <!-- Name -->
+      <label for="studentName">Full Name:</label>
+      <input type="text" id="studentName" required>
+
+      <!-- Email -->
+      <label for="studentEmail">Email:</label>
+      <input type="email" id="studentEmail" required>
+
+      <!-- Program Selection -->
+      <label for="program">Program:</label>
+      <select id="program" required>
+        <option value="">-- Choose a Program --</option>
+        <option value="cloud">Cloud Computing</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="cyber">Cyber Security</option>
+      </select>
+
+      <!-- Gender -->
+      <label>Gender:</label>
+      <div class="gender-field">
+        <input type="radio" name="gender" id="g-male" value="male">
+        <label for="g-male">Male</label>
+        <input type="radio" name="gender" id="g-female" value="female">
+        <label for="g-female">Female</label>
+      </div>
+
+      <!-- Password -->
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" required>
+
+      <!-- Confirm Password -->
+      <label for="rePwd">Confirm Password:</label>
+      <input type="password" id="rePwd" required>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Enroll Now</button>
+    </form>
+  </div>
+
+</body>
+</html>
