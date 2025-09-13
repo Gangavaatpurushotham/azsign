@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>To do List</title>
+  <style>
+    body {
+      background-color: white; /* Start with white */
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: darkblue;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background: white;
+      margin: 8px auto;
+      padding: 10px;
+      border-radius: 8px;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    input {
+      padding: 8px;
+      width: 200px;
+      border-radius: 5px;
+      border: 1px solid #333;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #addTask {
+      background-color: green;
+      color: white;
+    }
+
+    #done {
+      background-color: orange;
+      color: white;
+    }
+
+    .delete {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    <h1> To Do List </h1>
+    <h2>These are your tasks to complete</h2>
+    <ul id="taskList">
+      <li>Sample Task 1 <button id='done'>Complete</button> <button class='delete'>Delete</button></li>
+      <li>Sample Task 2 <button id='done'>Complete</button> <button class='delete'>Delete</button></li>
+    </ul>
+    <input type="text" id="taskInput" placeholder="Enter new task">
+    <button id="addTask">Add Task</button>
+
+<script>
+$(document).ready(function(){
+  // Add task
+  $("#addTask").click(function(){
+    let task = $("#taskInput").val();
+    if(task !== ""){
+      $("#taskList").append(
+        `<li>${task}
+          <button id='done'>Complete</button>
+          <button class='delete'>Delete</button>
+        </li>`
+      );
+      $("#taskInput").val("");
+      $("body").css("background-color", "white"); // back to white when task added
+    }
+  });
+
+  // Mark as complete
+  $("#taskList").on("click", "#done", function(){
+    $(this).parent().css("background-color","yellow");
+  });
+
+  // Delete
+  $("#taskList").on("click", ".delete", function(){
+    $(this).parent().remove();
+
+    // If all tasks are deleted, turn background yellow
+    if($("#taskList li").length === 0){
+      $("body").css("background-color", "yellow");
+    }
+  });
+});
+</script>
+</body>
+</html>
