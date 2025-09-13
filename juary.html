@@ -1,32 +1,54 @@
 <!DOCTYPE html>
 <html>
-   <head>
-    <tittle>to do list</tittle>
+<head>
+    <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   </head>
-   <style></style>
-    <body>
-     <h1> To do list</h1>
-     <br><br>
-     <h2>test all your task to complete </h2>
-     <ul id="list">
+    <style>
+        li {
+            padding: 5px;
+            margin: 5px 0;
+            list-style: none;
+        }
+        .yellow-bg {
+            background-color: yellow;
+        }
+        body.cleared {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <br><br>
+    <h2>Test all your tasks to complete</h2>
+    <ul id="list">
         <li>task 1</li>
         <li>task 2</li>
         <li>task 3</li>            
     </ul>
     <input type="text" id="myInput" placeholder="Add a new task">
     <button id="add">Add Task</button>
-    </body>
+    <button id="clear">Clear All</button>
+
     <script>
         $(document).ready(function(){
             $("#add").click(function(){
                 let task = $("#myInput").val();
                 if(task){
-                    $("#list").append("<li>" + task + "</li>");
+                    // Append new task with yellow background
+                    $("#list").append("<li class='yellow-bg'>" + task + "</li>");
                     $("#myInput").val("");
                 }
             });
+
+            $("#clear").click(function(){
+                // Remove all tasks
+                $("#list").empty();
+                // Change body background to yellow
+                $("body").addClass("cleared");
+            });
         });
-    </script>   
+    </script>
+</body>
 </html>
